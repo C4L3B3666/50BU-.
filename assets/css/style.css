@@ -1,0 +1,992 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background: #0D0D0D;
+}
+
+.efeito_luz {
+    opacity: .8;
+    filter: blur(60px);
+    border-radius: 50%;
+    background: radial-gradient(circle, #CB6CE6 0%, #0D0D0D 100%);
+}
+
+
+#menu {
+    width: 100%;
+    z-index: 10;
+    height: 4rem;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    padding: 2.5rem 4rem;
+    background: #0d0d0dcc;
+    backdrop-filter: blur(6px);
+    justify-content: space-between;
+}
+
+.texto_colorido {
+    color: #CB6CE6;
+}
+
+#logo50bue_menu {
+    font-size: 30pt;
+    color: #F5F5F5;
+    text-decoration: none;
+    font-family: "Bebas Neue"
+}
+
+#div_contentor_opcao_menu {
+    gap: .5rem;
+    display: flex;
+}
+
+.link_opcao_menu {
+    padding: .5rem;
+    font-weight: 400;
+    color: #F5F5F5;
+    text-decoration: none;
+    transition: all .3s ease-in;
+    font-family: "Roboto", sans-serif;
+}
+
+.link_opcao_menu:hover {
+    opacity: 70%;
+}
+
+.div_contentor_botoes {
+    gap: .5rem;
+    display: flex;
+    padding: .3rem;
+    width: max-content;
+    align-items: center;
+    border-radius: 999px;
+    border: 1px solid #80808078;
+    box-shadow: 0 0 2px rgba(128, 128, 128, 0.21);
+}
+
+.botao {
+    cursor: pointer;
+    color: #F5F5F5;
+    font-weight: 500;
+    padding: .3rem 1rem;
+    border-radius: 999px;
+    background: #CB6CE6;
+    font-family: "Roboto", sans-serif;
+    border: 1px solid rgba(203, 108, 230, 0.47);
+    box-shadow: 0 0 15px rgba(203, 108, 230, 0.9);
+}
+
+.botao_efeito {
+    box-shadow: none;
+    background: transparent;
+    border: 1px solid #80808078;
+}
+
+#div_content_botao_menu_hamburguer {
+    gap: .5rem;
+    display: none;
+    align-items: center;
+}
+
+#menu_hamburguer {
+    gap: .2rem;
+    display: flex;
+    padding: .5rem;
+    cursor: pointer;
+    align-items: end;
+    flex-direction: column;
+}
+
+.menu_hamburguer_bar {
+    height: 3px;
+    width: 2.5rem;
+    border-radius: 999px;
+    background: #F5F5F5; 
+}
+
+.menu_hamburguer_bar:nth-child(1) {
+    width: 1.2rem;
+}
+
+.menu_hamburguer_bar:nth-child(2) {
+    width: 1.8rem;
+}
+
+.secao {
+    padding: 5rem 4rem;
+}
+
+#secao_hero {
+    display: flex;
+    height: 100vh;
+    padding-top: 6rem;
+    align-items: center;
+    justify-content: center;
+}
+
+#div_contentor_textos_hero_botoes {
+    gap: .5rem;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+#titulo_hero {
+    font-size: 45pt;
+    color: transparent;
+    background-clip: text;
+    font-family: "League Spartan";
+    background: linear-gradient(90deg, #F5F5F5 0%, #B0B0B0 50%, #A0A0A0 100%);
+    -webkit-background-clip: text;
+}
+
+#texto_hero {
+    color: #F5F5F5;
+    font-weight: 300;
+    margin-block: .5rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.texto_destaque {
+    font-weight: 600;
+}
+
+#img_hero {
+    width: 650px;
+}
+
+.titulo_secao,
+.texto_secao {
+    color: #F5F5F5;
+}
+
+.titulo_secao {
+    font-size: 40pt;
+    font-family: "League Spartan", sans-serif;
+}
+
+.titulo_secao_ativar_numero {
+    font-size: 95pt;
+}
+
+.texto_secao {
+    font-weight: 300;
+    margin-block: .5rem;
+    font-family: "Roboto", sans-serif;
+}
+
+#div_content_form_ativacao_numero {
+    padding-top: 1rem;
+}
+
+form {
+    width: 550px;
+    padding: 2rem;
+    height: 500px;
+    display: flex;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #b0b0b038;
+}
+
+.aviso_site {
+    font-size: 35pt;
+    color: #CB6CE6;
+    text-align: center;
+    font-weight: bolder;
+    font-family: "League Spartan";
+    animation: pisca .5s ease infinite;
+}
+
+@keyframes pisca {
+    from {
+        transform: scale(1.01)
+    }
+    
+    to {
+        transform: scale(1.05)
+    }
+}
+
+#secao_ativacao_numero {
+    display: flex;
+}
+
+#div_contentor_cards_premios {
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carrousel_premios {
+    margin: auto;
+    display: flex;
+    width: 1075px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_premios {
+    width: 365px;
+    height: 575px;
+    padding: 1rem;
+    display: flex;
+    border-radius: 12px;
+    flex-direction: column;
+    border: 1px solid #b0b0b038;
+    justify-content: space-between;
+}
+
+.carousel_botao {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    font-size: 14pt;
+    position: absolute;
+    font-weight: bolder;
+}
+
+.carousel_botao.anterior {
+    left: 0;
+}
+
+.carousel_botao.seguinte {
+    right: 0;
+}
+
+#div_contentor_card_premio {
+    gap: .5rem;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    padding-inline: 1rem;
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+}
+
+#div_contentor_card_premio::before {
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 2rem;
+    height: 100%;
+    content: " ";
+    position: absolute;
+    background: linear-gradient(to right, #0D0D0D 0%, #0D0D0D 20%, #0D0D0D 5%, transparent 100%);
+}
+
+#div_contentor_card_premio::after {
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 1rem;
+    height: 100%;
+    content: " ";
+    position: absolute;
+    background: linear-gradient(to left, #0D0D0D 0%, #0D0D0D 20%, #0D0D0D 5%, transparent 100%);
+}
+
+.palavra_premio_card {
+    font-size: 17pt;
+    color: #909CA8;
+    text-transform: uppercase;
+    font-family: "League Spartan", sans-serif;
+}
+
+.nome_premio_card {
+    font-size: 30pt;
+    color: #CB6CE6;
+    text-transform: uppercase;
+    font-family: "League Spartan", sans-serif;
+}
+
+.texto_card_premio {
+    color: #F5F5F5;
+    font-weight: 300;
+    font-size: 11.5pt;
+    padding-block: .5rem;
+    font-family: "Roboto", sans-serif;;
+}
+
+.div_contentor_img_card_premio {
+    display: flex; 
+    justify-content: center;
+}
+
+.img_premio {
+    width: 300px;
+}
+
+.texto_card_premio_efeito {
+    opacity: 30%;
+    font-size: 18pt;
+    color: #F5F5F5;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "League Spartan", sans-serif;
+}
+
+#secao_video_vencedores {
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+#div_content_video {
+    width: 550px;
+    height: 500px;
+    padding: 2rem;
+    display: flex;
+    font-size: 45pt;
+    color: #CB6CE6;
+    text-align: center;
+    font-weight: bolder;
+    align-items: center;
+    border-radius: 12px;
+    justify-content: center;
+    border: 1px solid #b0b0b038;
+    font-family: "League Spartan", sans-serif;
+}
+
+.content_titulo_texto_secao_video {
+    width: 400px;
+}
+
+#secao_sobre_50bue {
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.content_titulo_texto_secao_sobre50 {
+    width: 400px;
+}
+
+#div_content_titulo_texto_sticky {
+    top: 6rem;
+    position: sticky;
+}
+
+#div_contentor_cards_fundadores {
+    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.efeito_luz_contentor_cards_fundadores {
+    top: 180px;
+    width: 300px;
+    height: 300px;
+    position: sticky;
+}
+
+.efeito_luz_contentor_cards_fundadores {
+    width: 250px;
+    height: 250px;
+}
+
+.efeito_card_fundadores {
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    border-radius: 99px;
+    pointer-events: none;
+    background: #0D0D0D;
+    border: 1px solid #b0b0b038;
+}
+
+.efeito_card_fundadores_topo {
+    top: -1.3rem;
+}
+
+.efeito_card_fundadores_topo_fundador_1 {
+    left: 2rem;
+}
+
+.efeito_card_fundadores_baixo_fundador_1 {
+    right: -3rem;
+    bottom: 10rem;
+    transform: rotate(90deg)
+}
+
+.efeito_card_fundadores_topo_fundador_2 {
+    right: 2rem;
+}
+
+.efeito_card_fundadores_baixo_fundador_2 {
+    left: -3rem;
+    bottom: 15rem;
+    transform: rotate(90deg)
+}
+
+.efeito_card_fundadores_baixo_fundador_3 {
+    left: -3rem;
+    bottom: 3rem;
+    transform: rotate(90deg)
+}
+
+.efeito_card_fundadores_topo_fundador_4 {
+    right: -1rem;
+}
+
+.efeito_card_fundadores_baixo_fundador_4 {
+    left: -1rem;
+    bottom: -1rem;
+}
+
+.efeito_card_fundadores_topo_fundador_5 {
+    top: 3rem;
+    right: -3rem;
+    transform: rotate(90deg)
+}
+
+.efeito_card_fundadores_baixo_fundador_5 {
+    right: -1rem;
+    bottom: -1rem;
+    transform: rotate(90deg)
+}
+
+.card_fundador {
+    top: 7rem;
+    width: 340px;
+    height: 460px;
+    display: flex;
+    padding: 2rem;
+    position: sticky;
+    text-align: center;
+    align-items: center;
+    border-radius: 12px;
+    background: #0D0D0D;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 1px solid #b0b0b038;
+}
+
+.card_fundador.visto .img_fundador {
+    opacity: 100%;
+    filter: grayscale(0);
+}
+
+.img_fundador {
+    opacity: 5%;
+    width: 200px;
+    filter: grayscale(100%);
+    transition: all 2s ease .5s;
+}
+
+.nome_fundador {
+    font-size: 25pt;
+    color: #CB6CE6;
+    font-weight: bolder;
+    font-family: "League Spartan", sans-serif;
+}
+
+.cargo_fundador {
+    opacity: 50%;
+    font-size: 14pt;
+    color: #F5F5F5;
+    font-weight: bolder;
+    font-family: "League Spartan", sans-serif;
+}
+
+.texto_fundador {
+    color: #F5F5F5;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+}
+
+#secao_video_explicativo {
+    gap: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.contentor_div_video {
+    display: flex;
+    justify-content: center;
+}
+
+.titulo_secao_duvida {
+    width: 550px;
+    font-size: 50pt;
+}
+
+#div_area_video {
+    width: 550px;
+    padding: 2rem;
+    height: 500px;
+    display: flex;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #b0b0b038;
+}
+
+#div_area_video p {
+    font-size: 45pt;
+    color: #CB6CE6;
+    text-align: center;
+    font-weight: bolder;
+    font-family: "League Spartan", sans-serif;
+}
+
+#secao_ajuda {
+    gap: 5rem;
+    display: flex;
+    background: #F5F5F5;
+    justify-content: center;
+    background: linear-gradient(to bottom, #0D0D0D 0%, #cc6ce611 100%);
+}
+
+.titulo_secao_ajuda,
+.texto_secao_ajuda {
+    color: #F5F5F5;
+}
+
+#div_content_percentagens {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+}
+
+.percentual_texto {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.percentual {
+    width: 120px;
+    font-size: 45pt;
+    text-align: right;
+    color: #F5F5F5;
+    font-weight: bolder;
+    font-family: "League Spartan", sans-serif;
+}
+
+.percentual_45 {
+    color: #CB6CE6;
+}
+
+.texto_percentual {
+    color: #F5F5F5;
+    font-family: "League Spartan", sans-serif;
+}
+
+#secao_texto_efeito_colorido {
+    gap: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to top, #0D0D0D 0%, #cc6ce611 100%);
+}
+
+#secao_texto_efeito_colorido .texto_efeito_colorir {
+    width: 45%;
+    opacity: 10%;
+    font-size: 20pt;
+    font-weight: 600;
+    color: #F5F5F5;
+    text-align: center;
+    transition: all .4s;
+    font-family: "Roboto", sans-serif;
+}
+
+#secao_texto_efeito_colorido .texto_efeito_colorir.colorido {
+    opacity: 100%;
+    color: #CB6CE6;
+}
+
+#secao_parceiros {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.content_titulo_texto_secao_parceiros {
+    width: 500px;
+}
+
+#div_contentor_parceiros {
+    gap: 1rem;
+    width: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img_logo_parceiro {
+    width: 150px; 
+    height: 150px;
+    padding: .5rem;
+    border-radius: 12px;
+    transition: all .3s;
+    border: 1px solid #b0b0b02f;
+}
+
+.img_logo_parceiro:hover {
+    transform: scale(1.08);
+    border: 1px solid #CB6CE6;
+}
+
+.img_logo_parceiro_mobile {
+    display: none;
+}
+
+#secao_texto_impacto p {
+    font-size: 45pt;
+    font-weight: 700;
+    color: transparent;
+    text-align: center;
+    padding-inline: 8rem;
+    background-clip: text;
+    font-family: "League Spartan";
+    background: linear-gradient(90deg, #F5F5F5 0%, #B0B0B0 50%, #A0A0A0 100%);
+    -webkit-background-clip: text;
+}
+
+#rodape {
+    padding: 4rem;
+    background: linear-gradient(180deg, #0D0D0D 0%, #cc6ce617 100%)
+}
+
+.div_contentor_logo50bue_termos {
+    display: flex;
+    align-items: center;
+    padding-inline: 10rem;
+    justify-content: space-between;
+}
+
+.logo50bue_rodape {
+    font-size: 30pt;
+    color: #F5F5F5;
+    text-decoration: none;
+    font-family: "Bebas Neue";
+}
+
+#div_content_termos_politica {
+    gap: 1rem;
+    display: flex;
+}
+
+#div_content_termos_politica a {
+    opacity: 70%;
+    color: #F5F5F5;
+    text-decoration: none;
+    font-family: "League Spartan", sans-serif;
+}
+
+#div_content_termos_politica a:hover {
+    text-decoration: underline;
+}
+
+.linha_horizontal_rodape {
+    margin-block: 2rem;
+    border: 1px solid #80808044;
+}
+
+.div_redes_sociais {
+    gap: 3rem;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.div_redes_sociais a {
+    opacity: 90%;
+    font-size: 30pt;
+    font-weight: 500;
+    color: #F5F5F5;
+    text-decoration: none;
+    font-family: "League Spartan", sans-serif;
+}
+
+.div_content_localizacao_copy {
+    display: flex;
+    color: #F5F5F5;
+    font-weight: 200;
+    padding-top: 2rem;
+    justify-content: space-between;
+    font-family: "Roboto", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    #menu {
+        padding-block: 2rem;
+        padding-inline: 2.5rem 1.5rem;
+    }
+
+    #logo50bue_menu {
+        font-size: 30pt;
+    }
+
+    .div_contentor_botoes_desktop {
+        display: none;
+    }
+
+    #div_contentor_opcao_menu {
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        padding-top: 3rem;
+        background: black;
+        position: absolute;
+        transition: all 1s;
+        align-items: center;
+        pointer-events: none;
+        flex-direction: column;
+        justify-content: space-around;
+        clip-path: circle(100px at 33rem -7rem);
+    }
+
+    .link_opcao_menu:hover {
+        opacity: 100%;
+        color: #CB6CE6;
+    }
+    
+    #menu.ativo #div_contentor_opcao_menu {
+        pointer-events: all;
+        clip-path: circle(1000px at 0rem 0rem);
+    }
+
+    #div_content_botao_menu_hamburguer {
+        display: flex;
+    }
+
+    #div_contentor_logo50bue_menu,
+    #div_content_botao_menu_hamburguer {
+        z-index: 1;
+    }
+
+    .secao {
+        padding-inline: 2.5rem;
+    }
+
+    #secao_hero {
+        text-align: center;
+        height: max-content;
+        flex-direction: column;
+    }
+
+    #div_contentor_textos_hero_botoes {
+        width: 100%;
+        align-items: center;
+    }
+
+    #div_content_img_hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #img_hero {
+        width: 95%;
+    }
+
+    #secao_ativacao_numero {
+        flex-direction: column;
+    }
+
+    #div_content_form_ativacao_numero {
+        display: flex;
+        justify-content: center;
+    }
+
+    .titulo_secao_ativar_numero {
+        font-size: 40pt;
+    }
+
+    form {
+        width: 95%;
+    }
+
+    .aviso_site {
+        font-size: 25pt;
+    }
+
+    #secao_video_vencedores {
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    #div_content_video {
+        width: 100%;
+    }
+
+    #secao_sobre_50bue {
+        flex-direction: column;
+    }
+
+    .content_titulo_texto_secao_sobre50 {
+        width: 100%;
+    }
+
+    #secao_video_explicativo {
+        flex-direction: column;
+    }
+
+    #div_area_video {
+        width: 95%;
+    }
+
+    .titulo_secao_duvida {
+        width: 100%;
+        font-size: 40pt;
+    }
+
+    #secao_ajuda {
+        gap: 1rem;
+        flex-direction: column;
+    }
+    
+    .percentual_texto {
+        align-items: start;
+    }
+
+    .percentual {
+        width: 195px;
+    }
+
+    .texto_percentual {
+        font-weight: 500;
+    }
+
+    #secao_texto_efeito_colorido .texto_efeito_colorir {
+        width: 100%;
+        font-size: 18pt;
+    }
+
+    #secao_parceiros {
+        flex-direction: column;
+    }
+
+    .content_titulo_texto_secao_parceiros {
+        width: 100%;
+    }
+
+    #fade_contentor_parceiros {
+        position: relative;
+    }
+
+    #div_content_scroll_parceiros {
+        overflow: hidden;
+    }
+        
+    #fade_contentor_parceiros::before,
+    #fade_contentor_parceiros::after {
+        top: 0;
+        width: 22%;
+        z-index: 2;
+        content: "";
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    #fade_contentor_parceiros::before {
+        left: -50px;
+        background: linear-gradient(to right, #0D0D0D 80%, transparent 100%);
+    }
+
+    #fade_contentor_parceiros::after {
+        right: -50px;
+        background: linear-gradient(to left, #0D0D0D 80%, transparent 100%);
+    }
+
+    #div_contentor_parceiros {
+        flex-wrap: nowrap;
+        padding-top: 1rem;
+        width: max-content;
+        justify-content: start;
+        animation: animacao_parceiros 30s linear infinite;
+    }
+
+    @keyframes animacao_parceiros {
+        0% { 
+            transform: translateX(0); 
+        }
+        100% { 
+            transform: translateX(-50%); 
+        }
+    }
+
+    .img_logo_parceiro {
+        border: none;
+        pointer-events: none;
+        transform: scale(1.2)
+    }
+
+    .img_logo_parceiro_mobile {
+        display: block;
+    }
+
+    #secao_texto_impacto p {
+        font-size: 40pt;
+        padding-inline: 2rem;
+    }
+
+    #rodape {
+        background: linear-gradient(180deg, #0D0D0D 0%, #cc6ce617 100%)
+    }
+
+    .div_contentor_logo50bue_termos {
+        gap: .5rem;
+        padding-inline: 0;
+        flex-direction: column;
+    }
+
+    #div_content_termos_politica a {
+        width: max-content;
+    }
+
+    .div_redes_sociais {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .div_redes_sociais a {
+        font-size: 15pt;
+    }
+
+    .div_content_localizacao_copy {
+        gap: .5rem;
+        padding-top: 2rem;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .carrousel_premios {
+        width: 100%;
+    }
+
+    #div_contentor_card_premio::before {
+        width: 2rem;
+    }
+
+    #div_contentor_card_premio::after {
+        width: .5rem;
+    } 
+}
