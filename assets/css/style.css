@@ -837,7 +837,7 @@ form {
     #menu {
         width: 100vw;
         padding-block: 2rem;
-        padding-inline: 2.5rem 1.5rem;
+        padding-inline: 1rem 1.5rem;
     }
 
     #logo50bue_menu {
@@ -959,7 +959,8 @@ form {
     }
 
     .content_titulo_texto_secao_sobre50,
-    .content_titulo_texto_secao_video {
+    .content_titulo_texto_secao_video,
+    .content_titulo_texto_secao_ranking {
         width: 100%;
     }
 
