@@ -228,6 +228,29 @@ form {
     display: flex;
 }
 
+#secao_ranking {
+    gap: 2rem;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.content_titulo_texto_secao_ranking {
+    width: 450px;
+}
+
+#div_content_ranking {
+    width: 550px;
+    height: 500px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    justify-content: center;
+    border: 1px solid #b0b0b038;
+}
+
 #div_contentor_cards_premios {
     display: flex;
     position: relative;
@@ -846,7 +869,8 @@ form {
         font-size: 25pt;
     }
 
-    #secao_video_vencedores {
+    #secao_video_vencedores,
+    #secao_ranking {
         gap: .5rem;
         flex-direction: column;
     }
@@ -857,7 +881,8 @@ form {
         opacity: .25;
     }
 
-    #div_content_video {
+    #div_content_video,
+    #div_content_ranking {
         width: 100%;
     }
 
