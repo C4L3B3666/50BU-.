@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -15,12 +16,15 @@ body {
 }
 
 .efeito_luz {
+    z-index: -1;
     opacity: .8;
+    width: 250px;
+    height: 250px;
     filter: blur(60px);
     border-radius: 50%;
+    position: absolute;
     background: radial-gradient(circle, #CB6CE6 0%, #0D0D0D 100%);
 }
-
 
 #menu {
     width: 100%;
@@ -344,8 +348,15 @@ form {
 #secao_video_vencedores {
     gap: 2rem;
     display: flex;
+    position: relative;
     justify-content: center;
     flex-direction: row-reverse;
+}
+
+.efeito_luz_secao_video_vencedores {
+    top: 0;
+    left: 8rem;
+    opacity: .3;
 }
 
 #div_content_video {
@@ -353,14 +364,18 @@ form {
     height: 500px;
     padding: 2rem;
     display: flex;
-    font-size: 45pt;
-    color: #CB6CE6;
-    text-align: center;
-    font-weight: bolder;
     align-items: center;
     border-radius: 12px;
     justify-content: center;
     border: 1px solid #b0b0b038;
+}
+
+#div_content_video div p {
+    font-size: 45pt;
+    color: #CB6CE6;
+    text-align: center;
+    font-weight: bolder;
+    animation: pisca .5s ease infinite;
     font-family: "League Spartan", sans-serif;
 }
 
@@ -394,14 +409,7 @@ form {
 
 .efeito_luz_contentor_cards_fundadores {
     top: 180px;
-    width: 300px;
-    height: 300px;
     position: sticky;
-}
-
-.efeito_luz_contentor_cards_fundadores {
-    width: 250px;
-    height: 250px;
 }
 
 .efeito_card_fundadores {
@@ -475,10 +483,16 @@ form {
     text-align: center;
     align-items: center;
     border-radius: 12px;
+    transform: scale(.85);
     background: #0D0D0D;
     flex-direction: column;
+    transition: all .8s ease;
     justify-content: space-around;
     border: 1px solid #b0b0b038;
+}
+
+.card_fundador.visto {
+    transform: scale(1)
 }
 
 .card_fundador.visto .img_fundador {
@@ -490,7 +504,7 @@ form {
     opacity: 5%;
     width: 200px;
     filter: grayscale(100%);
-    transition: all 2s ease .5s;
+    transition: all 1s ease .2s;
 }
 
 .nome_fundador {
@@ -548,6 +562,7 @@ form {
     text-align: center;
     font-weight: bolder;
     font-family: "League Spartan", sans-serif;
+    animation: pisca .5s ease infinite;
 }
 
 #secao_ajuda {
@@ -732,6 +747,11 @@ form {
 }
 
 @media screen and (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    
     #menu {
         padding-block: 2rem;
         padding-inline: 2.5rem 1.5rem;
@@ -781,7 +801,7 @@ form {
     }
 
     .secao {
-        padding-inline: 2.5rem;
+        padding-inline: 2rem;
     }
 
     #secao_hero {
@@ -794,7 +814,7 @@ form {
         width: 100%;
         align-items: center;
     }
-
+    
     #div_content_img_hero {
         display: flex;
         align-items: center;
@@ -827,19 +847,34 @@ form {
     }
 
     #secao_video_vencedores {
-        gap: 1rem;
+        gap: .5rem;
         flex-direction: column;
+    }
+
+    .efeito_luz_secao_video_vencedores {
+        top: 25rem;
+        left: 18rem;
+        opacity: .25;
     }
 
     #div_content_video {
         width: 100%;
     }
 
+    .content_titulo_texto_secao_video {
+        width: 100%;
+    }
+    
+    #div_content_video div p {
+        font-size: 25pt;
+    }
+
     #secao_sobre_50bue {
         flex-direction: column;
     }
 
-    .content_titulo_texto_secao_sobre50 {
+    .content_titulo_texto_secao_sobre50,
+    .content_titulo_texto_secao_video {
         width: 100%;
     }
 
@@ -847,8 +882,17 @@ form {
         flex-direction: column;
     }
 
-    #div_area_video {
-        width: 95%;
+    #div_area_video p {
+        font-size: 25pt;
+    }
+
+    .card_fundador {
+        width: 90%;
+        height: max-content;
+    }
+
+    .img_fundador {
+        width: 100%;
     }
 
     .titulo_secao_duvida {
@@ -944,8 +988,8 @@ form {
     }
 
     #secao_texto_impacto p {
-        font-size: 40pt;
-        padding-inline: 2rem;
+        font-size: 25pt;
+        padding-inline: 0;
     }
 
     #rodape {
@@ -982,11 +1026,20 @@ form {
         width: 100%;
     }
 
+    .card_premios {
+        min-width: 290px;
+        min-height: 590px;
+    }
+
+    .img_premio {
+        width: 95%;
+    }
+
     #div_contentor_card_premio::before {
-        width: 2rem;
+        width: .5rem;
     }
 
     #div_contentor_card_premio::after {
-        width: .5rem;
+        width: 10px;
     } 
 }
