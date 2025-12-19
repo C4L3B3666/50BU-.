@@ -835,6 +835,7 @@ form {
     }
     
     #menu {
+        width: 100vw;
         padding-block: 2rem;
         padding-inline: 2.5rem 1.5rem;
     }
