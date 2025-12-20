@@ -998,7 +998,7 @@ form {
     }
 
     #secao_ranking {     
-        overflow-y: visible;
+        overflow: hidden;
     }
 
     #secao_video_vencedores,
