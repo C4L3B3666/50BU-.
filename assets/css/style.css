@@ -959,7 +959,6 @@ form {
         font-size: 25pt;
     }
 
-
     #div_content_ranking {
         gap: .5rem;
         width: 100%;
@@ -977,9 +976,10 @@ form {
     }
 
     #figura_abstrata_ranking {
-        top: 7rem;
-        width: 360px;
-        height: 300px;
+        top: 25rem;
+        left: 4rem;
+        width: 260px;
+        height: 200px;
     }
 
     @keyframes roda_abstrato {
