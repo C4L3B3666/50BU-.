@@ -27,13 +27,13 @@ body {
 }
 
 #menu {
-    width: 100%;
     z-index: 10;
-    height: 4rem;
+    width: 100vw;
+    height: 5rem;
     display: flex;
     position: fixed;
+    padding: 2rem 4rem;
     align-items: center;
-    padding: 2.5rem 4rem;
     background: #0d0d0dcc;
     backdrop-filter: blur(6px);
     justify-content: space-between;
@@ -241,72 +241,101 @@ form {
 }
 
 #div_content_ranking {
-    width: 550px;
-    padding: 2rem;
-    border-radius: 12px;
+    gap: .5rem;
+    width: 540px;
+    display: flex;
+    flex-wrap: wrap;
     height: max-content;
-    border: 1px solid #b0b0b038;
+    justify-content: center;
 }
 
-.subtitulo_div_content_ranking {
-    font-size: 27pt;
+#figura_abstrata_ranking {
+    top: 6rem;
+    left: 20rem;
+    z-index: -1;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    animation: roda_abstrato 3s linear infinite;
+    border-radius: 75% 30% 30% 70% / 60% 40% 60% 40%;
+    background: linear-gradient(35deg, #CB6CE6 0%, #0D0D0D 100%);
+}
+
+@keyframes roda_abstrato {
+    0% {
+        transform: rotate(0) scale(1.4)
+    }
+
+    100% {
+        transform: rotate(365deg) scale(1.4)
+    }
+}
+
+.card_content_pessoa_ranking {
+    gap: 1.5rem;
+    width: 260px;
+    display: flex;
+    height: 260px;
+    padding: 2rem;
+    cursor: pointer;
     color: #F5F5F5;
-    padding-bottom: .5rem;
-    font-family: "League Spartan", sans-serif;
+    text-align: center;
+    position: relative;
+    border-radius: 12px;
+    align-items: center;
+    background: #0D0D0D;
+    flex-direction: column;
+    border: 2px solid #b0b0b038;
 }
 
-.div_content_nome_numeros_ativados {
-    display: flex;
-    margin-block: 1rem;
-    align-items: center;
-    padding-inline: .5rem;
-    justify-content: space-between;
-    border-left: 2px solid #b0b0b038;
-}
-
-.div_content_posicao_nome_ranking {
-    display: flex;
-    align-items: center;
+.card_content_pessoa_ranking_1 {
+    border: 2px solid #CB6CE6;
 }
 
 .posicao_ranking {
+    opacity: 45%;
     font-size: 30pt;
-    color: #f5f5f552;
-    font-weight: bolder;
-    font-family: "League Spartan", sans-serif;
-}
-
-.posicao_ranking_1,
-.posicao_ranking_2,
-.posicao_ranking_3 {
-    color: #CB6CE6;
-}
-
-.nome_participante_ranking {
-    font-size: 20pt;
-    color: #f5f5f552;
-    font-family: "League Spartan", sans-serif;
-}
-
-.nome_participante_ranking_1,
-.nome_participante_ranking_2,
-.nome_participante_ranking_3 {
-    color: #CB6CE6
-}
-
-.info_total_numero_ativado {
-    font-size: 13pt;
     color: #F5F5F5;
     font-family: "League Spartan", sans-serif;
 }
 
-.total_numero_ativado {
-    color: #f5f5f552;
+.posicao_ranking_1 {
+    opacity: 1;
+    color: #CB6CE6;
 }
 
-.total_numero_ativado_1,
-.total_numero_ativado_2,
-.total_numero_ativado_3 {
+.nome_pessoa_ranking {
+    opacity: 45%;
+    font-size: 19pt;
+    color: #F5F5F5;
+    font-family: "League Spartan", sans-serif;
+}
+
+.nome_pessoa_ranking_1 {
+    opacity: 1;
+    color: #CB6CE6;
+}
+
+.texto_info_ranking {
+    opacity: 45%;
+    font-size: 15pt;
+    font-weight: 400;
+    color: #F5F5F5;
+    font-family: "League Spartan", sans-serif;
+}
+
+.texto_info_ranking_1 {
+    opacity: 1;
+    color: #F5F5F5;
+}
+
+.texto_colorido_total_ativos {
+    opacity: 1;
+    color: #F5F5F5;
+    font-weight: bolder;
+}
+
+.texto_colorido_total_ativos_1 {
     color: #CB6CE6;
 }
 
@@ -835,9 +864,7 @@ form {
     }
     
     #menu {
-        width: 100vw;
-        padding-block: 2rem;
-        padding-inline: 1rem 1.5rem;
+        padding: 2rem 1.5rem;
     }
 
     #logo50bue_menu {
@@ -888,9 +915,12 @@ form {
     }
 
     #secao_hero {
-        text-align: center;
         height: max-content;
         flex-direction: column;
+    }
+
+    #titulo_hero {
+        font-size: 40pt;
     }
 
     #div_contentor_textos_hero_botoes {
@@ -905,7 +935,7 @@ form {
     }
 
     #img_hero {
-        width: 95%;
+        max-width: 100%;
     }
 
     #secao_ativacao_numero {
@@ -929,6 +959,48 @@ form {
         font-size: 25pt;
     }
 
+
+    #div_content_ranking {
+        gap: .5rem;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: start;
+        justify-content: start;
+        scroll-behavior: smooth;
+        overflow: scroll visible;
+        scroll-snap-type: mandatory;
+    }
+
+    #div_content_ranking::-webkit-scrollbar {
+        opacity: 0;
+    }
+
+    #figura_abstrata_ranking {
+        top: 7rem;
+        width: 360px;
+        height: 300px;
+    }
+
+    @keyframes roda_abstrato {
+        0% {
+            transform: rotate(0) scale(1.0)
+        }
+
+        100% {
+            transform: rotate(365deg) scale(1.0)
+        }
+    }
+
+    .card_content_pessoa_ranking {
+        min-width: 250px;
+        gap: 1.5rem;
+    }
+
+    #secao_ranking {     
+        overflow-y: visible;
+    }
+
     #secao_video_vencedores,
     #secao_ranking {
         gap: .5rem;
@@ -941,8 +1013,7 @@ form {
         opacity: .25;
     }
 
-    #div_content_video,
-    #div_content_ranking {
+    #div_content_video {
         width: 100%;
     }
 
@@ -1009,6 +1080,7 @@ form {
     }
 
     #secao_parceiros {
+        overflow-x: hidden;
         flex-direction: column;
     }
 
