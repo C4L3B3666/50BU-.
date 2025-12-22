@@ -181,7 +181,7 @@ body {
 }
 
 .titulo_secao_ativar_numero {
-    font-size: 95pt;
+    font-size: 80pt;
 }
 
 .texto_secao {
@@ -190,19 +190,22 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-#div_content_form_ativacao_numero {
-    padding-top: 1rem;
-}
-
 form {
-    width: 550px;
+    width: 700px;
     padding: 2rem;
-    height: 500px;
+    height: 600px;
     display: flex;
+    overflow: hidden;
+    position: relative;
     border-radius: 12px;
     align-items: center;
     justify-content: center;
     border: 1px solid #b0b0b038;
+}
+
+.efeito_luz_secao_ativacao_numeros {
+    top: -7rem;
+    right: -7rem;
 }
 
 .aviso_site {
@@ -225,7 +228,7 @@ form {
 }
 
 #secao_ativacao_numero {
-    display: flex;
+    display: flex; 
 }
 
 #secao_ranking {
