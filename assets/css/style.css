@@ -83,7 +83,7 @@ body {
     cursor: pointer;
     color: #F5F5F5;
     font-weight: 500;
-    padding: .3rem 1rem;
+    padding: .3rem .5rem;
     border-radius: 999px;
     background: #CB6CE6;
     font-family: "Roboto", sans-serif;
@@ -95,6 +95,23 @@ body {
     box-shadow: none;
     background: transparent;
     border: 1px solid #80808078;
+}
+
+.botao_animado {
+    animation: anima_botao .95s ease infinite;
+}
+
+@keyframes anima_botao {
+    0% {
+        transform: scale(1)
+    }
+    100% {
+        transform: scale(1.1)
+    }
+}
+
+.arrow_botao_ganhar {
+    transform: rotate(210deg)
 }
 
 #div_content_botao_menu_hamburguer {
@@ -226,7 +243,7 @@ body {
 form {
     width: 700px;
     padding: 1rem;
-    height: 600px;
+    height: 650px;
     display: flex;
     overflow: hidden;
     position: relative;
@@ -303,6 +320,28 @@ form {
     border-radius: 99px;
     padding: .5rem .8rem;
     border: 1px solid #b0b0b038;
+    font-family: "League Spartan", sans-serif;
+}
+
+#div_content_total_ativado_botao_acao {
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#div_total_ativado_preco {
+    width: 100%;
+    display: flex;
+    padding-top: 1rem;
+    padding-inline: 2rem;
+    justify-content: space-between;
+}
+
+#div_total_ativado_preco p {
+    color: #F5F5F5;
+    font-weight: 800;
     font-family: "League Spartan", sans-serif;
 }
 
