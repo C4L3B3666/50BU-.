@@ -288,6 +288,8 @@ form {
     display: flex;
     flex-wrap: wrap;
     padding-top: 1rem;
+    alig-items: center;
+    justify-content: center;
 }
 
 .input_selecionar_numero {
