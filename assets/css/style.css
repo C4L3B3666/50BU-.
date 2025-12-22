@@ -217,7 +217,7 @@ body {
 }
 
 .texto_destaque {
-    font-weight: 600;
+    font-weight: 800;
 }
 
 #img_hero {
@@ -262,6 +262,11 @@ form {
     right: -10rem;
 }
 
+.efeito_luz_secao_ativacao_numeros_2 {
+    left: -11rem;
+    bottom: -10rem;
+}
+
 .div_botao_tipo_ativacao {
     width: 500px;
     padding: .3rem;
@@ -299,7 +304,7 @@ form {
 }
 
 .info_sobre_tipo_ativacao {
-    opacity: 75%;
+    opacity: 85%;
     color: #F5F5F5;
     font-family: "League Spartan", sans-serif;
 }
@@ -318,13 +323,13 @@ form {
 }
 
 .label_selecionar_numero {
-    opacity: 35%;
+    opacity: 30%;
     font-size: 15pt;
     cursor: pointer;
     color: #F5F5F5;
     border-radius: 99px;
+    transition: all .4s;
     padding: .5rem .8rem;
-    transition: all .3s ease;
     border: 1px solid #b0b0b038;
     font-family: "League Spartan", sans-serif;
 }
@@ -1149,6 +1154,9 @@ form {
         text-align: center;
     }
 
+    #div_total_ativado_preco {
+        padding-inline: .5rem;
+    }
 
     #div_content_ranking {
         gap: .5rem;
