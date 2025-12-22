@@ -860,7 +860,7 @@ form {
 @media screen and (max-width: 768px) {
 
     body {
-        overflow-x: hidden;
+        overflow-x: hidden !important;
     }
     
     #menu {
@@ -997,13 +997,10 @@ form {
         gap: 1.5rem;
     }
 
-    #secao_ranking {     
-        overflow-x: hidden;
-    }
-
     #secao_video_vencedores,
     #secao_ranking {
         gap: .5rem;
+        overflow-x: hidden;
         flex-direction: column;
     }
 
