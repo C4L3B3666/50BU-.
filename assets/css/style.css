@@ -35,7 +35,7 @@ body {
     padding: 2rem 4rem;
     align-items: center;
     background: #0d0d0dcc;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(7px);
     justify-content: space-between;
 }
 
@@ -134,9 +134,42 @@ body {
 #secao_hero {
     display: flex;
     height: 100vh;
+    overflow: visible;
     padding-top: 6rem;
+    position: relative;
     align-items: center;
     justify-content: center;
+}
+
+.img_moeda_hero {
+    width: 150px;
+    position: absolute;
+    pointer-events: none;
+}
+
+.img_moeda_hero_frente {
+    top: 6rem;
+    width: 150px;
+    filter: blur(0)
+    transform: rotate(40deg);
+    animation: ofuscaMoeda 5s linear infinite;
+}
+
+@keyframes ofuscaMoeda {
+    0% {
+        left: -4rem;
+        filter: blur(0)
+    }
+    100% {
+        left: -2rem;
+        filter: blur(10px);
+    }
+}
+
+.img_moeda_hero_inverso {
+    right: -2rem;
+    bottom: -2rem;
+    transform: rotate(35deg);
 }
 
 #div_contentor_textos_hero_botoes {
@@ -181,7 +214,7 @@ body {
 }
 
 .titulo_secao_ativar_numero {
-    font-size: 80pt;
+    font-size: 85pt;
 }
 
 .texto_secao {
@@ -192,29 +225,83 @@ body {
 
 form {
     width: 700px;
-    padding: 2rem;
+    padding: 1rem;
     height: 600px;
     display: flex;
     overflow: hidden;
     position: relative;
     border-radius: 12px;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
     border: 1px solid #b0b0b038;
+    justify-content: space-between;
 }
 
 .efeito_luz_secao_ativacao_numeros {
-    top: -7rem;
-    right: -7rem;
+    top: -10rem;
+    right: -10rem;
 }
 
-.aviso_site {
-    font-size: 35pt;
-    color: #CB6CE6;
-    text-align: center;
-    font-weight: bolder;
-    font-family: "League Spartan";
-    animation: pisca .5s ease infinite;
+.div_botao_tipo_ativacao {
+    width: 500px;
+    padding: .3rem;
+    margin: auto;
+    border-radius: 99px;
+    border: 1px solid #b0b0b038;
+    justify-content: space-between;
+}
+
+.botao_tipo_ativacao {
+    cursor: pointer;
+    font-weight: 500;
+    color: #F5F5F5;
+    color: #b0b0b0e3;
+    border-radius: 999px;
+    padding: .2rem 1.5rem;
+    background: transparent;
+    border: 2px solid transparent;
+    font-family: "Roboto", sans-serif;
+}
+
+.botao_tipo_ativacao.ativo {
+    color: #F5F5F5;
+    background: #CB6CE6;
+    border: 2px solid #CB6CE6;
+    box-shadow: 0 0 7px #CB6CE6;
+}
+
+.div_texto_tipo_ativacao {
+    padding-top: 2rem;
+}
+
+.div_info_sobre_tipo_ativacao {
+    width: 650px;
+}
+
+.info_sobre_tipo_ativacao {
+    opacity: 75%;
+    color: #F5F5F5;
+    font-family: "League Spartan", sans-serif;
+}
+
+.nav_selecionar_numeros {
+    gap: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+}
+
+.input_selecionar_numero {
+    display: none;
+}
+
+.label_selecionar_numero {
+    font-size: 15pt;
+    cursor: pointer;
+    color: #F5F5F5;
+    border-radius: 99px;
+    padding: .5rem .8rem;
+    border: 1px solid #b0b0b038;
+    font-family: "League Spartan", sans-serif;
 }
 
 @keyframes pisca {
@@ -229,6 +316,10 @@ form {
 
 #secao_ativacao_numero {
     display: flex; 
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #secao_ranking {
@@ -918,12 +1009,42 @@ form {
     }
 
     #secao_hero {
+        overflow: hidden;
         height: max-content;
         flex-direction: column;
     }
 
     #titulo_hero {
         font-size: 40pt;
+    }
+
+    .img_moeda_hero {
+        width: 130px;
+    }
+    
+    .img_moeda_hero_frente {
+        opacity: .6;
+        left: -4rem;
+        z-index: -1;
+        width: 140px;
+        animation: none;
+        transform: rotate(40deg);
+    }
+
+    .img_moeda_hero_inverso {
+        bottom: 1rem;
+        animation: mostraMoeda 4s linear infinite;
+    }
+
+    @keyframes mostraMoeda {
+        0% {
+            right: -3rem;
+            filter: blur(0);
+        }
+        100% {
+            right: -2rem;
+            filter: blur(10px);
+        }
     }
 
     #div_contentor_textos_hero_botoes {
@@ -942,7 +1063,7 @@ form {
     }
 
     #secao_ativacao_numero {
-        flex-direction: column;
+        text-align: left;
     }
 
     #div_content_form_ativacao_numero {
@@ -955,11 +1076,7 @@ form {
     }
 
     form {
-        width: 95%;
-    }
-
-    .aviso_site {
-        font-size: 25pt;
+        width: 100%;
     }
 
     #div_content_ranking {
