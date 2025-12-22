@@ -1076,8 +1076,24 @@ form {
     }
 
     form {
-        width: 100%;
+        width: 90vw;
+        height: max-content;
     }
+
+    .div_botao_tipo_ativacao {
+        width: 100%;
+        display: flex;
+    }
+
+    .botao_tipo_ativacao {
+        padding: .2rem .5rem;
+    }
+
+    .div_info_sobre_tipo_ativacao {
+        width: 100%;
+        text-align: center;
+    }
+
 
     #div_content_ranking {
         gap: .5rem;
