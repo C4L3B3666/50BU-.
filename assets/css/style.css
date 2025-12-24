@@ -741,7 +741,7 @@ form {
 .card_fundador {
     top: 7rem;
     width: 340px;
-    height: 460px;
+    height: 575px;
     display: flex;
     padding: 2rem;
     position: sticky;
@@ -761,13 +761,12 @@ form {
 }
 
 .card_fundador.visto .img_fundador {
-    opacity: 100%;
     filter: grayscale(0);
 }
 
 .img_fundador {
-    opacity: 5%;
-    width: 200px;
+    width: 290px;
+    pointer-events: none;
     filter: grayscale(100%);
     transition: all 1s ease .2s;
 }
@@ -1029,6 +1028,20 @@ form {
         display: none;
     }
 
+    .div_contentor_botoes_mobile {
+        position: relative;
+        animation: saltaBotao .85s linear infinite;
+    }
+    
+    @keyframes saltaBotao {
+        0% {
+            transform: scale(1)
+        }
+        100% {
+            transform: scale(1.04)
+        }
+    }
+
     #div_contentor_opcao_menu {
         top: 0;
         right: 0;
@@ -1129,6 +1142,13 @@ form {
     #div_content_form_ativacao_numero {
         display: flex;
         justify-content: center;
+    }
+
+    .input_selecionar_numero:hover + .label_selecionar_numero  {
+        opacity: 30%;
+        box-shadow: none;
+        transform: scale(1);
+        background: transparent;
     }
 
     .titulo_secao_ativar_numero {
