@@ -334,12 +334,23 @@ form {
     font-family: "League Spartan", sans-serif;
 }
 
-.input_selecionar_numero:checked + .label_selecionar_numero,
-.input_selecionar_numero:hover + .label_selecionar_numero  {
+.input_selecionar_numero:checked + .label_selecionar_numero {
     opacity: 100%;
     background: #CB6CE6;
-    transform: scale(1.15);
     box-shadow: 0 0 10px #CB6CE6;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .label_selecionar_numero:hover {
+        opacity: 100%;
+        background: #CB6CE6;
+        transform: scale(1.15);
+        box-shadow: 0 0 10px #CB6CE6;
+    }
+    
+    .input_selecionar_numero:checked {
+        transform: scale(1.15);
+    }
 }
 
 #div_content_total_ativado_botao_acao {
@@ -1142,13 +1153,6 @@ form {
     #div_content_form_ativacao_numero {
         display: flex;
         justify-content: center;
-    }
-
-    .input_selecionar_numero:hover + .label_selecionar_numero  {
-        opacity: 30%;
-        box-shadow: none;
-        transform: scale(1);
-        background: transparent;
     }
 
     .titulo_secao_ativar_numero {
