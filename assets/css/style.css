@@ -247,11 +247,11 @@ body {
 form {
     width: 700px;
     padding: 1rem;
-    height: 650px;
     display: flex;
     overflow: hidden;
     position: relative;
     border-radius: 12px;
+    height: max-content;
     flex-direction: column;
     border: 1px solid #b0b0b038;
     justify-content: space-between;
@@ -1137,7 +1137,6 @@ form {
 
     form {
         width: 90vw;
-        height: max-content;
     }
 
     .div_botao_tipo_ativacao {
