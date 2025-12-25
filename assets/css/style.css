@@ -190,7 +190,14 @@ body {
     -webkit-background-clip: text;
 }
 
+#div_texto_hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #texto_hero {
+    width: 38rem;
     color: #F5F5F5;
     font-weight: 300;
     margin-block: .5rem;
@@ -1073,7 +1080,6 @@ form {
         padding-inline: 2rem;
     }
 
-
     #div_texto_botoes_hero {
         width: 100%;
         padding-inline: 2rem;
@@ -1081,6 +1087,10 @@ form {
 
     #titulo_hero {
         font-size: 40pt;
+    }
+
+    #texto_hero {
+        width: 100%; 
     }
 
     .img_moeda_hero {
