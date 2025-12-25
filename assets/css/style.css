@@ -82,7 +82,7 @@ body {
     cursor: pointer;
     color: #F5F5F5;
     font-weight: 500;
-    padding: .3rem .5rem;
+    padding: .35rem .7rem;
     border-radius: 999px;
     background: #CB6CE6;
     font-family: "Roboto", sans-serif;
@@ -159,7 +159,7 @@ body {
     position: relative;
     align-items: center;
     justify-content: center;
-    background: center / cover url('../img/bg.png') no-repeat;
+    background: center / cover url('../img/img_bg.webp') no-repeat;
 }
 
 #div_contentor_textos_hero_botoes {
