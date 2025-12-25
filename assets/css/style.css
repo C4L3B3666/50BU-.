@@ -34,7 +34,6 @@ body {
     position: fixed;
     padding: 2rem 4rem;
     align-items: center;
-    background: #0d0d0dcc;
     backdrop-filter: blur(7px);
     justify-content: space-between;
 }
@@ -153,55 +152,37 @@ body {
 }
 
 #secao_hero {
+    padding: 0;
     display: flex;
     height: 100vh;
     overflow: visible;
-    padding-top: 6rem;
     position: relative;
     align-items: center;
     justify-content: center;
-}
-
-.img_moeda_hero {
-    width: 150px;
-    position: absolute;
-    pointer-events: none;
-}
-
-.img_moeda_hero_frente {
-    top: 6rem;
-    width: 150px;
-    filter: blur(0)
-    transform: rotate(40deg);
-    animation: ofuscaMoeda 5s linear infinite;
-}
-
-@keyframes ofuscaMoeda {
-    0% {
-        left: -4rem;
-        filter: blur(0)
-    }
-    100% {
-        left: -2rem;
-        filter: blur(10px);
-    }
-}
-
-.img_moeda_hero_inverso {
-    right: -2rem;
-    bottom: -2rem;
-    transform: rotate(35deg);
+    background: center / cover url('../img/bg.png') no-repeat;
 }
 
 #div_contentor_textos_hero_botoes {
-    gap: .5rem;
-    width: 800px;
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    justify-content: center;
+    background: #0d0d0dcc;
+}
+
+#div_texto_botoes_hero {
+    width: 65rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #titulo_hero {
-    font-size: 45pt;
+    font-size: 50pt;
     color: transparent;
     background-clip: text;
     font-family: "League Spartan";
@@ -1092,10 +1073,10 @@ form {
         padding-inline: 2rem;
     }
 
-    #secao_hero {
-        overflow: hidden;
-        height: max-content;
-        flex-direction: column;
+
+    #div_texto_botoes_hero {
+        width: 100%;
+        padding-inline: 2rem;
     }
 
     #titulo_hero {
