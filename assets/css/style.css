@@ -1047,11 +1047,11 @@ form {
         width: 100vw;
         height: 100vh;
         padding-top: 3rem;
-        background: black;
         position: absolute;
         transition: all 1s;
         align-items: center;
         pointer-events: none;
+        background: #0D0D0D;
         flex-direction: column;
         justify-content: space-around;
         clip-path: circle(100px at 33rem -7rem);
